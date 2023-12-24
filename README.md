@@ -42,8 +42,9 @@ The Search API endpoint retrieves flights based on the provided departure and ar
 ## RESTful Service
 The API adheres to REST principles, making it easy to interact with other systems. It is implemented in Java using the Spring Boot framework.
 
-Authentication
-The application includes an authentication structure to verify user identity and authorize access.
+## Authentication
+The application includes an authentication structure to verify user identity and authorize access. I have only left "/api/ucuslar/ucusbul" to be public so that users can search through their desired flights. 
+Anything else is secured by basic auth which wants admin for username and admin for password. Because anything besides looking for flight information includes of CRUD operations which needs to be protected.
 
 ## Scheduled Background Jobs
 A scheduled background job runs every 5 minutes to fetch flight information from a mock third-party API and stores it in the database.
