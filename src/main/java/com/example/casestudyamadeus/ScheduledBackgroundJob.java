@@ -13,7 +13,7 @@ public class ScheduledBackgroundJob {
     @Autowired
     UcuslarRepository ucuslarRepository;
 
-    //@Scheduled(fixedRate = 50000) // 300,000 milliseconds = 5 minutes
+    @Scheduled(fixedRate = 300000) // 300,000 milliseconds = 5 minutes
     public void fetchFlightInfo() {
          MockApiService mockApiService = new MockApiService();
          List<Ucuslar> flightInfoList = mockApiService.fetchMockData();

@@ -33,7 +33,7 @@ public class HavaalanlariService {
             updatedHavaalani.setId(id);
             return havaalanlariRepository.save(updatedHavaalani);
         }
-        return null; // Handle not found case
+        return null;
     }
 
     public void deleteHavaalani(Long id) {
