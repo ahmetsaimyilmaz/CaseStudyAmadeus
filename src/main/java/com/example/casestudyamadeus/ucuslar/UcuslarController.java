@@ -18,7 +18,7 @@ public class UcuslarController {
     private final UcuslarService ucuslarService;
 
 
-    @GetMapping("/ucusBul")
+    @GetMapping("/ucusbul")
     public List<Ucuslar> getUcuslar(
             @RequestParam Integer kalkisYeri,
             @RequestParam Integer varisYeri,

@@ -1,7 +1,6 @@
 package com.example.casestudyamadeus.havaalanlari;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -19,11 +18,7 @@ public class HavaalanlariController {
     }
 
     @GetMapping
-    public List<Havaalanlari> getAllHavaalanlari(Authentication authentication) {
-
-        String userName = authentication.getName();
-
-        System.out.println("Spring Security In-memory Authentication Example - Welcome " + userName);
+    public List<Havaalanlari> getAllHavaalanlari() {
 
         return havaalanlariService.getAllHavaalanlari();
     }
